@@ -7,6 +7,8 @@ import { RecordableTextField } from './Auth/Fields';
 import axios from 'axios';
 
 const Companion = (props) => {
+    const history = useHistory();
+
     const [messages, setMessages] = useState([]);
     const [message, setMessage] = useState('');
     const [botMessage, setBotMessage] = useState('');
@@ -67,6 +69,10 @@ const Companion = (props) => {
         console.log(resBody);
     };
 
+    function handleGoBack() {
+        history.push('/assess');
+    }
+
     return (
         <div>
             <h1>Companion</h1>
@@ -87,7 +93,10 @@ const Companion = (props) => {
             </div>
 
             <RecordableTextField className="message-input" controlId='formMessage' label='Type Message Here' value={message} setValue={setMessage} onKeyPress={(e) => e.key === 'Enter' && handleSubmitMessage()}/>
-            <Button onClick={saveConversation}>Save Conversation</Button>
+            <div className='fullwidth flex-row gap-2'>
+                <Button className='fullwidth' variant='primary' onClick={saveConversation}>Save Conversation</Button>
+                <Button className='fullwidth' variant='primary' onClick={handleGoBack}>Go Back</Button>
+            </div>
         </div>
     );
 }
