@@ -56,9 +56,9 @@ const Register = (props) => {
   }
   
   return (
-    <div className="reg-container align-center">
+    <div className="reg-container align-center width-40-on-desktop">
       <h1>Register</h1>
-      <Form className='reg width-30' onSubmit={handleSubmit}>
+      <Form className='reg' onSubmit={handleSubmit}>
         <GenericField controlId="formFirstName" label="First name"/>
         <GenericField controlId="formLastName" label="Last name"/>
         <UsernameField/>
