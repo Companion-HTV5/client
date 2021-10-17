@@ -63,6 +63,9 @@ export default function Login(props) {
         <Button className='fullwidth' variant="primary" disabled={isLoading} type="submit">
           {!isLoading ? 'Log in' : 'Logging in…'}
         </Button>
+        <div className='fullwidth flex-row gap-2'>
+          <Button className='fullwidth' variant='primary' onClick={() => history.push('/register')}>Don't have an account</Button>
+        </div>
       </Form>
     </div>
   );
