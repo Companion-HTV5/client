@@ -15,6 +15,7 @@ const Companion = (props) => {
     
     const getBotResponse = async (userInput) => {
         const url = "https://companion-api-htv5.herokuapp.com/api/v1/12345678";
+        userInput += ". I should";
         const res = await fetch(
             url,
             {
