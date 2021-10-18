@@ -75,6 +75,17 @@ li {
   width: 30vw;
 }
 
+@media screen and (min-width: 1000px) {
+  .width-40-on-desktop {
+    width: 40vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .width-40-on-desktop {
+    width: 60vw;
+  }
+}
+
 .align-center {
   text-align: center;
 }

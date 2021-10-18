@@ -55,14 +55,17 @@ export default function Login(props) {
   }
   
   return (
-    <div className='align-center'>
+    <div className='align-center width-40-on-desktop'>
       <h1>Log in</h1>
-      <Form className='width-30' onSubmit={handleSubmit}>
+      <Form className='fullwidth' onSubmit={handleSubmit}>
         <UsernameField/>
         <PasswordField/>
         <Button className='fullwidth' variant="primary" disabled={isLoading} type="submit">
           {!isLoading ? 'Log in' : 'Logging in…'}
         </Button>
+        <div className='fullwidth flex-row gap-2'>
+          <Button className='fullwidth' variant='primary' onClick={() => history.push('/register')}>Don't have an account</Button>
+        </div>
       </Form>
     </div>
   );
