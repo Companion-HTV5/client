@@ -9,3 +9,6 @@
 4. run `npm start`
 
 # Features
+- select a mood based on how you are feeling
+- type out why you are feeling that way
+- talk to someone who will give you advice
