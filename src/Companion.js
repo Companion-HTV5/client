@@ -68,6 +68,7 @@ const Companion = (props) => {
           );
         const resBody = await res.json();
         console.log(resBody);
+        alert("Conversation saved!");
     };
 
     function handleGoBack() {
