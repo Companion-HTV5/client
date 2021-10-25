@@ -6,6 +6,7 @@ import Button from 'react-bootstrap/Button';
 
 
 import { UsernameField, PasswordField } from './Auth/Fields';
+import Auth0 from './Auth/Auth0';
 
 export default function Login(props) {
   const history = useHistory();
@@ -53,6 +54,8 @@ export default function Login(props) {
     
     setLoading(false);
   }
+
+
   
   return (
     <div className='align-center width-40-on-desktop'>
@@ -67,6 +70,7 @@ export default function Login(props) {
           <Button className='fullwidth' variant='primary' onClick={() => history.push('/register')}>Don't have an account</Button>
         </div>
       </Form>
+      <Auth0/>
     </div>
   );
 }
